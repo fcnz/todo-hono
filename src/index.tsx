@@ -41,7 +41,13 @@ app.post("/todos", async (c) => {
     done: false,
   };
   todos.push(newTodo);
-  return c.html(<TodoItem todo={newTodo} />);
+  const itemsLeft = todos.filter((t) => !t.done).length;
+  return c.html(
+    <>
+      <TodoItem todo={newTodo} />
+      <ItemCount itemsLeft={itemsLeft} />
+    </>
+  );
 });
 
 app.get("/todos/edit/:id", (c) => {
