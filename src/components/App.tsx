@@ -25,7 +25,7 @@ export const App = ({ todos, filter, itemsLeft }: AppProps) => (
             >
               <input
                 id="txtTodo"
-                class="py-2 pl-4 w-full italic"
+                class="py-2 pl-4 w-full italic outline-0"
                 name="todo"
                 placeholder="What needs to be done?"
                 autofocus

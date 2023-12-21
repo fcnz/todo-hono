@@ -7,7 +7,7 @@ export const TodoItem = ({ todo }: TodoItemProps) => (
   <li id={"todo-" + todo.id} class="border-t border-b text-lg">
     <div class="flex items-center">
       <input
-        class="w-4 h-4 m-3 mr-2"
+        class="w-4 h-4 ml-3 mr-2"
         type="checkbox"
         checked={todo.done}
         hx-patch={"/todos/" + todo.id}
@@ -23,7 +23,7 @@ export const TodoItem = ({ todo }: TodoItemProps) => (
         {todo.name}
       </label>
       <button
-        class="w-10 h-10 text-3xl text-orange-500 hover:text-red-500"
+        class="w-11 h-11 text-3xl text-orange-500 hover:text-red-500"
         hx-delete={"/todos/" + todo.id}
         _={"on htmx:afterOnLoad remove #todo-" + todo.id}
       >

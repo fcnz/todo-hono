@@ -9,13 +9,13 @@ export const EditItem = ({ todo }: EditItemProps) => (
     hx-post={"/todos/update/" + todo.id}
     hx-trigger="focusout"
     hx-swap="outerHTML"
-    class="flex h-full mb-0"
+    class="flex h-full mb-0 border-y"
   >
     <input
       type="text"
       name="name"
       value={todo.name}
-      class="flex-1 py-2 mx-8 px-2 focus text-lg"
+      class="flex-1 py-2 mx-8 px-2 focus text-lg outline-0"
       autofocus
     />
   </form>
